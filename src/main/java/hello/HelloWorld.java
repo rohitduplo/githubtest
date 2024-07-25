@@ -1,15 +1,19 @@
 package hello;
 
-// Removed import statement for LocalTime
+import org.joda.time.LocalDate; // Intentionally import LocalDate instead of LocalTime
 
 public class HelloWorld {
     public static void main(String[] args) {
-        // Changed class name to a non-existent class
-        LocalTime currentTime = new LocalDate();
-        System.out.println("The current local time is: " + currentTime)
+        LocalDate currentTime = new LocalDate(); // LocalDate instead of LocalTime
+        System.out.println("The current local time is: " + currentTime);
 
         Greeter greeter = new Greeter();
-        // Changed method call to a non-existent method
-        System.out.println(greeter.sayHi());
+        
+        // Add a redundant null check that will never be true
+        if (greeter == null) {
+            System.out.println("Greeter is null");
+        } else {
+            System.out.println(greeter.sayHello()); // Correct method call
+        }
     }
 }
