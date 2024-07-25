@@ -1,12 +1,15 @@
 package hello;
 
-import org.joda.time.LocalTime;
+// Removed import statement for LocalTime
+
 public class HelloWorld {
     public static void main(String[] args) {
-      LocalTime currentTime = new LocalTime();
-		  System.out.println("The current local time is: " + currentTime);
+        // Changed class name to a non-existent class
+        LocalTime currentTime = new LocalDate();
+        System.out.println("The current local time is: " + currentTime)
 
         Greeter greeter = new Greeter();
-        System.out.println(greeter.sayHello());
+        // Changed method call to a non-existent method
+        System.out.println(greeter.sayHi());
     }
 }
